@@ -1,18 +1,24 @@
 extends CharacterBody2D
 
-@export var acceleration: float = 200
-@export var max_speed: float = 300
+@export var acceleration: float = 150
+@export var max_speed: float = 220
 @export var friction: float = 100
-@export var turn_speed: float = 3.0  # radians/sec
+@export var turn_speed: float = 2.0  # radians/sec
 @export var turbo_multiplier: float = 2.0
 @export var turbo_action: String = "turbo_p1"
 @export var input_prefix: String = "p1" # "p1" or "p2"
 
+var active = false
+var has_passed_middle = false
+
 
 func _physics_process(delta: float) -> void:
+    if not active:
+        return
+
     var forward = Input.get_action_strength(input_prefix + "_down") - Input.get_action_strength(input_prefix + "_up")
     var turn = Input.get_action_strength(input_prefix + "_right") - Input.get_action_strength(input_prefix + "_left")
-    var is_turbo = Input.is_action_pressed(turbo_action)
+    var is_turbo = false # Input.is_action_pressed(turbo_action)
 
     var effective_max_speed = max_speed
     if is_turbo:

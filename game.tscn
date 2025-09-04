@@ -1,0 +1,207 @@
+[gd_scene load_steps=15 format=4 uid="uid://cjc5s7fvsb7hy"]
+
+[ext_resource type="TileSet" uid="uid://dqycs0khi3t75" path="res://tilemap.tres" id="1_fc0e3"]
+[ext_resource type="Script" uid="uid://b78n4wsiad0nn" path="res://game.gd" id="1_ryrav"]
+[ext_resource type="Script" uid="uid://c7vkbodd0a4c4" path="res://scripts/car.gd" id="2_7jktm"]
+[ext_resource type="Texture2D" uid="uid://c6eiaq4kkfj27" path="res://assets/PNG/Cars/car_black_1.png" id="3_ryrav"]
+[ext_resource type="Texture2D" uid="uid://8dw683b7qcsr" path="res://assets/PNG/Cars/car_blue_1.png" id="4_eow3j"]
+[ext_resource type="FontFile" uid="uid://ck87rqynda5c7" path="res://assets/LuckiestGuy-Regular.ttf" id="6_eow3j"]
+[ext_resource type="Texture2D" uid="uid://caajdmiimb2u2" path="res://assets/playstation_button_cross.png" id="7_eow3j"]
+[ext_resource type="Texture2D" uid="uid://br2ilini40t56" path="res://assets/buttonSquare_brown.png" id="7_vef74"]
+[ext_resource type="Texture2D" uid="uid://22mhul4o1tbc" path="res://assets/buttonSquare_brown_pressed.png" id="8_hve3p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2yge"]
+radius = 7.02002
+height = 31.9925
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(108, 20)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfdv2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iotsf"]
+texture = ExtResource("7_vef74")
+texture_margin_left = 7.50004
+texture_margin_top = 5.98407
+texture_margin_right = 8.05855
+texture_margin_bottom = 9.89366
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 45.0001, 49.1142)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lc2xo"]
+texture = ExtResource("8_hve3p")
+texture_margin_left = 7.50004
+texture_margin_top = 7.46417
+texture_margin_right = 8.05855
+texture_margin_bottom = 5.34577
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0.0646706, -2.54502, 44.9483, 47.2074)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ryrav")
+
+[node name="Grass" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD3//v/AAALAA0AAAD4//v/AAALAA0AAAD5//v/AAALAA0AAAD6//v/AAALAA0AAAD7//v/AAALAA0AAAD8//v/AAALAA0AAAD9//v/AAALAA0AAAD+//v/AAALAA0AAAD///v/AAALAA0AAAAAAPv/AAALAA0AAAABAPv/AAALAA0AAAACAPv/AAALAA0AAAADAPv/AAALAA0AAAAEAPv/AAALAA0AAAAFAPv/AAALAA0AAAAGAPv/AAALAA0AAAAHAPv/AAALAA0AAAAIAPv/AAALAA0AAAAIAPz/AAALAA0AAAAIAP3/AAALAA0AAAAIAP7/AAALAA0AAAAIAP//AAALAA0AAAAIAAAAAAALAA0AAAAIAAEAAAALAA0AAAAIAAIAAAALAA0AAAAIAAMAAAALAA0AAAAIAAQAAAALAA0AAAAHAAQAAAALAA0AAAAGAAQAAAALAA0AAAAFAAQAAAALAA0AAAAEAAQAAAALAA0AAAADAAQAAAALAA0AAAACAAQAAAALAA0AAAABAAQAAAALAA0AAAAAAAQAAAALAA0AAAD//wQAAAALAA0AAAD+/wQAAAALAA0AAAD9/wQAAAALAA0AAAD8/wQAAAALAA0AAAD7/wQAAAALAA0AAAD6/wQAAAALAA0AAAD5/wQAAAALAA0AAAD4/wQAAAALAA0AAAD3/wQAAAALAA0AAAD3/wMAAAALAA0AAAD3/wIAAAALAA0AAAD3/wEAAAALAA0AAAD3/wAAAAALAA0AAAD3//z/AAALAA0AAAD3//3/AAALAA0AAAD3//7/AAALAA0AAAD3////AAALAA0AAAD4//z/AAALAA0AAAD5//z/AAALAA0AAAD6//z/AAALAA0AAAD7//z/AAALAA0AAAD8//z/AAALAA0AAAD9//z/AAALAA0AAAD+//z/AAALAA0AAAD///z/AAALAA0AAAAAAPz/AAALAA0AAAABAPz/AAALAA0AAAACAPz/AAALAA0AAAADAPz/AAALAA0AAAAEAPz/AAALAA0AAAAFAPz/AAALAA0AAAAGAPz/AAALAA0AAAAHAPz/AAALAA0AAAAHAP3/AAALAA0AAAAHAP7/AAALAA0AAAAHAP//AAALAA0AAAAHAAAAAAALAA0AAAAHAAEAAAALAA0AAAAHAAIAAAALAA0AAAAHAAMAAAALAA0AAAAGAAMAAAALAA0AAAAFAAMAAAALAA0AAAAEAAMAAAALAA0AAAADAAMAAAALAA0AAAACAAMAAAALAA0AAAABAAMAAAALAA0AAAAAAAMAAAALAA0AAAD//wMAAAALAA0AAAD+/wMAAAALAA0AAAD9/wMAAAALAA0AAAD8/wMAAAALAA0AAAD7/wMAAAALAA0AAAD6/wMAAAALAA0AAAD5/wMAAAALAA0AAAD4/wMAAAALAA0AAAD4/wIAAAALAA0AAAD4/wEAAAALAA0AAAD4/wAAAAALAA0AAAD4////AAALAA0AAAD4//7/AAALAA0AAAD4//3/AAALAA0AAAD5//3/AAALAA0AAAD6//3/AAALAA0AAAD7//3/AAALAA0AAAD8//3/AAALAA0AAAD9//3/AAALAA0AAAD+//3/AAALAA0AAAD///3/AAALAA0AAAAAAP3/AAALAA0AAAABAP3/AAALAA0AAAACAP3/AAALAA0AAAADAP3/AAALAA0AAAAEAP3/AAALAA0AAAAFAP3/AAALAA0AAAAGAP3/AAALAA0AAAAGAP7/AAALAA0AAAAGAP//AAALAA0AAAAGAAAAAAALAA0AAAAGAAEAAAALAA0AAAAGAAIAAAALAA0AAAAFAAIAAAALAA0AAAAEAAIAAAALAA0AAAADAAIAAAALAA0AAAACAAIAAAALAA0AAAABAAIAAAALAA0AAAAAAAIAAAALAA0AAAD//wIAAAALAA0AAAD+/wIAAAALAA0AAAD9/wIAAAALAA0AAAD8/wIAAAALAA0AAAD7/wIAAAALAA0AAAD6/wIAAAALAA0AAAD5/wIAAAALAA0AAAD5/wEAAAALAA0AAAD5/wAAAAALAA0AAAD5////AAALAA0AAAD5//7/AAALAA0AAAD6//7/AAALAA0AAAD7//7/AAALAA0AAAD8//7/AAALAA0AAAD9//7/AAALAA0AAAD+//7/AAALAA0AAAD///7/AAALAA0AAAAAAP7/AAALAA0AAAABAP7/AAALAA0AAAACAP7/AAALAA0AAAADAP7/AAALAA0AAAAEAP7/AAALAA0AAAAFAP7/AAALAA0AAAAFAP//AAALAA0AAAAFAAAAAAALAA0AAAAFAAEAAAALAA0AAAAEAAEAAAALAA0AAAADAAEAAAALAA0AAAACAAEAAAALAA0AAAABAAEAAAALAA0AAAAAAAEAAAALAA0AAAD//wEAAAALAA0AAAD+/wEAAAALAA0AAAD9/wEAAAALAA0AAAD8/wEAAAALAA0AAAD7/wEAAAALAA0AAAD6/wEAAAALAA0AAAD6/wAAAAALAA0AAAD6////AAALAA0AAAD7////AAALAA0AAAD7/wAAAAALAA0AAAD8////AAALAA0AAAD8/wAAAAALAA0AAAD9////AAALAA0AAAD9/wAAAAALAA0AAAD+////AAALAA0AAAD+/wAAAAALAA0AAAD/////AAALAA0AAAD//wAAAAALAA0AAAAAAP//AAALAA0AAAAAAAAAAAALAA0AAAABAP//AAALAA0AAAABAAAAAAALAA0AAAACAP//AAALAA0AAAACAAAAAAALAA0AAAADAP//AAALAA0AAAADAAAAAAALAA0AAAAEAP//AAALAA0AAAAEAAAAAAALAA0AAAD3//r/AAALAA0AAAAIAAUAAAALAA0AAAD3/wUAAAALAA0AAAD4//r/AAALAA0AAAD4/wUAAAALAA0AAAD5//r/AAALAA0AAAD5/wUAAAALAA0AAAD6//r/AAALAA0AAAD6/wUAAAALAA0AAAD7//r/AAALAA0AAAD7/wUAAAALAA0AAAD8//r/AAALAA0AAAD8/wUAAAALAA0AAAD9//r/AAALAA0AAAD9/wUAAAALAA0AAAD+//r/AAALAA0AAAD+/wUAAAALAA0AAAD///r/AAALAA0AAAD//wUAAAALAA0AAAAAAPr/AAALAA0AAAAAAAUAAAALAA0AAAABAPr/AAALAA0AAAABAAUAAAALAA0AAAACAPr/AAALAA0AAAACAAUAAAALAA0AAAADAPr/AAALAA0AAAADAAUAAAALAA0AAAAEAPr/AAALAA0AAAAEAAUAAAALAA0AAAAFAPr/AAALAA0AAAAFAAUAAAALAA0AAAAGAPr/AAALAA0AAAAGAAUAAAALAA0AAAAHAPr/AAALAA0AAAAHAAUAAAALAA0AAAAIAPr/AAALAA0AAAA=")
+tile_set = ExtResource("1_fc0e3")
+
+[node name="Env" type="TileMapLayer" parent="."]
+position = Vector2(193, -37)
+scale = Vector2(0.6, 0.6)
+tile_map_data = PackedByteArray("AAD0//z/AAAQAAIAADD0//3/AAANAAoAAAD0//7/AAAQAAIAADD0////AAAQAAIAADD0/wAAAAAQAAIAADD0/wEAAAAQAAIAADD0/wIAAAAQAAIAADD0/wMAAAAQAAIAADD0/wQAAAAQAAIAADD1/wQAAAAQAAMAAAD2/wQAAAAQAAIAAGD3/wQAAAAQAAIAAGD4/wQAAAAQAAIAAGD5/wQAAAARAAAAAAD5/wUAAAAQAAIAAAD5/wYAAAAQAAIAAAD6/wcAAAAQAAIAAGD7/wcAAAAQAAIAAGD8/wcAAAAQAAIAAGD9/wcAAAAQAAIAAGD+/wcAAAAQAAIAAGD//wcAAAAQAAIAAGAAAAcAAAAQAAIAAGABAAcAAAAQAAMAAAACAAcAAAAQAAMAAAACAAYAAAAQAAIAAGADAAYAAAAQAAIAAGAEAAYAAAAQAAMAAAAFAAYAAAAQAAIAAAAFAAUAAAAQAAIAAAAFAAQAAAAQAAIAAAAFAAMAAAAQAAIAAAAFAAIAAAARAAAAAAAEAAIAAAAQAAIAAGADAAIAAAAQAAIAAGACAAIAAAAQAAIAAGABAAIAAAAQAAIAAGAAAAIAAAAQAAIAAGD//wIAAAAQAAMAAAD+/wIAAAAQAAMAAAD+/wEAAAAQAAMAAAD9/wAAAAAQAAMAAAD9////AAAQAAIAAAD9//7/AAAQAAIAAAD9//3/AAAQAAIAAAD9//z/AAAQAAIAAAD9//v/AAARAAAAAAD8//v/AAAQAAMAAAD8//r/AAAQAAIAAAD7//r/AAAQAAMAAAD7//n/AAAQAAIAAGD6//n/AAAQAAIAAGD5//n/AAAQAAIAAGD5//r/AAAQAAIAAFD4//r/AAAQAAMAAAD3//r/AAAQAAMAAAD2//r/AAAQAAIAAGD1//r/AAAQAAIAAGD1//v/AAAQAAMAAAD0//v/AAAQAAIAADD9/wEAAAAQAAMAAAD8//z/AAAQAAMAAAD8//3/AAAQAAMAAAD8//7/AAAQAAIAADD8////AAAQAAIAADD8/wAAAAAQAAIAADD7//v/AAAQAAIAADD6//r/AAAQAAIAAFD4//v/AAARAAAAACD3//v/AAAQAAIAAFD2//v/AAAQAAIAAFD1//z/AAAQAAIAAAD1////AAAQAAIAAAD1/wAAAAAQAAIAAAD1/wEAAAAQAAIAAAD1/wIAAAAQAAIAAAD1//7/AAAQAAIAAAD1/wMAAAAQAAIAAAD3/wUAAAAQAAIAAFD4/wUAAAAQAAMAAAD2/wUAAAAQAAIAAFD1/wUAAAAQAAIAAFD4/wYAAAAQAAIAADD4/wcAAAAQAAIAADD5/wcAAAAQAAMAAAD6/wgAAAAQAAIAAFD7/wgAAAAQAAIAAFD8/wgAAAAQAAIAAFD9/wgAAAAQAAIAAFACAAgAAAAQAAIAAFABAAgAAAAQAAIAAFAAAAgAAAAQAAIAAFD//wgAAAAQAAIAAFD+/wgAAAAQAAIAAFABAAYAAAARAAAAAGADAAcAAAAQAAMAAAAEAAcAAAAQAAIAAFAFAAcAAAARAAAAACAEAAUAAAAQAAIAABAEAAQAAAAQAAIAABAEAAMAAAAQAAMAAAADAAMAAAAQAAIAAFACAAMAAAAQAAIAAFABAAMAAAAQAAIAAFAAAAMAAAAQAAIAAFD//wMAAAAQAAIAAFD//wEAAAARAAAAAHD+/wAAAAARAAAAAHD7//z/AAAQAAIAADD4//n/AAAQAAIAAGD0//r/AAARAAAAAGD0/wUAAAARAAAAADD5/wgAAAAQAAIAAFD4/wgAAAARAAAAADADAAgAAAARAAAAACD7//3/AAARAAAAADD8/wEAAAARAAAAADD9/wIAAAARAAAAADD+/wMAAAARAAAAADD8//n/AAARAAAAAAD3//n/AAARAAAAABD1//3/AAANAAgAAAA=")
+tile_set = ExtResource("1_fc0e3")
+
+[node name="Car1" type="CharacterBody2D" parent="."]
+position = Vector2(-217, -160)
+rotation = -3.11996
+script = ExtResource("2_7jktm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Car1"]
+position = Vector2(-0.978148, 1.02139)
+scale = Vector2(0.261492, 0.261492)
+texture = ExtResource("3_ryrav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car1"]
+position = Vector2(-0.978155, 1.02138)
+shape = SubResource("CapsuleShape2D_h2yge")
+
+[node name="Car2" type="CharacterBody2D" parent="."]
+position = Vector2(-241, -160)
+rotation = -3.11996
+script = ExtResource("2_7jktm")
+input_prefix = "p2"
+
+[node name="Sprite2D" type="Sprite2D" parent="Car2"]
+position = Vector2(-0.978148, 1.02139)
+scale = Vector2(0.261492, 0.261492)
+texture = ExtResource("4_eow3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car2"]
+position = Vector2(-0.978155, 1.02138)
+shape = SubResource("CapsuleShape2D_h2yge")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StartLine" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartLine"]
+position = Vector2(-230, -108)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="MiddleLine" type="Area2D" parent="."]
+position = Vector2(385, 158)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MiddleLine"]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.388235)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -30.5
+offset_right = 97.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_eow3j")
+theme_override_font_sizes/font_size = 60
+text = "Ready!"
+horizontal_alignment = 1
+
+[node name="GoBackButton" type="Button" parent="CanvasLayer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -159.0
+offset_right = 200.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_eow3j")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mfdv2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iotsf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lc2xo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iotsf")
+text = "Go Back"
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Player1" type="Label" parent="UI"]
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 219.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("6_eow3j")
+theme_override_font_sizes/font_size = 40
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="Laps" type="Label" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 45.0
+offset_right = 202.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("6_eow3j")
+theme_override_font_sizes/font_size = 40
+text = "0/3"
+horizontal_alignment = 1
+
+[node name="Player2" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -231.0
+offset_top = 28.0
+offset_right = -37.0
+offset_bottom = 113.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("6_eow3j")
+theme_override_font_sizes/font_size = 40
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="Laps" type="Label" parent="UI/Player2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 45.0
+offset_right = 202.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("6_eow3j")
+theme_override_font_sizes/font_size = 40
+text = "0/3"
+horizontal_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("7_eow3j")
+texture_pressed = ExtResource("7_eow3j")
+texture_hover = ExtResource("7_eow3j")

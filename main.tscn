@@ -1,371 +1,249 @@
-[gd_scene load_steps=7 format=4 uid="uid://cjc5s7fvsb7hy"]
+[gd_scene load_steps=17 format=3 uid="uid://xctf2b4ecqk1"]
 
-[ext_resource type="Script" uid="uid://c7vkbodd0a4c4" path="res://scripts/car.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://dswehbt4h4uvu" path="res://kenney_racing-pack/Spritesheets/output.png" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://c6eiaq4kkfj27" path="res://kenney_racing-pack/PNG/Cars/car_black_1.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://b5m82vrxx6xab" path="res://assets/logo.png" id="1_1bvp3"]
+[ext_resource type="FontFile" uid="uid://ck87rqynda5c7" path="res://assets/LuckiestGuy-Regular.ttf" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://22mhul4o1tbc" path="res://assets/buttonSquare_brown_pressed.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dwvsq8v13lksx" path="res://scripts/main.gd" id="1_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://br2ilini40t56" path="res://assets/buttonSquare_brown.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dn5kq6pp0f764" path="res://assets/keyboard_arrow_left_outline.png" id="5_5vw27"]
+[ext_resource type="Texture2D" uid="uid://ckcjl8jbp82um" path="res://assets/keyboard_arrow_up_outline.png" id="6_kek77"]
+[ext_resource type="Texture2D" uid="uid://b3wjfw0xolggy" path="res://assets/keyboard_arrow_down_outline.png" id="7_4c57u"]
+[ext_resource type="Texture2D" uid="uid://buf83soolrx4f" path="res://assets/keyboard_arrow_right_outline.png" id="8_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dbreg4esn77bt" path="res://assets/keyboard_a_outline.png" id="9_dg77c"]
+[ext_resource type="Texture2D" uid="uid://dq4g4yowxlhda" path="res://assets/keyboard_w_outline.png" id="10_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://2dh274jn7net" path="res://assets/keyboard_s_outline.png" id="11_w48qg"]
+[ext_resource type="Texture2D" uid="uid://c5j4pcfvg1d7b" path="res://assets/keyboard_d_outline.png" id="12_vivmo"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
-texture = ExtResource("1_h2yge")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-16:0/0 = 0
-17:0/0 = 0
-17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, 24.5143, -4.67707, 3.87067, -26.9335)
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-16:1/0 = 0
-17:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-16:2/0 = 0
-16:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, -32, 32, 32, 22.6037, 32, 21.2887, -32)
-17:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-16:3/0 = 0
-17:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-12:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-16:4/0 = 0
-17:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-16:5/0 = 0
-17:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-16:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-16:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-16:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-16:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-16:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-16:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-9:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-9:13/0 = 0
-10:13/0 = 0
-11:13/0 = 0
-12:13/0 = 0
-13:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-16:13/0 = 0
-17:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-16:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-5:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-16:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-3:16/0 = 0
-4:16/0 = 0
-5:16/0 = 0
-6:16/0 = 0
-7:16/0 = 0
-8:16/0 = 0
-9:16/0 = 0
-10:16/0 = 0
-11:16/0 = 0
-12:16/0 = 0
-13:16/0 = 0
-14:16/0 = 0
-15:16/0 = 0
-16:16/0 = 0
-0:17/0 = 0
-1:17/0 = 0
-2:17/0 = 0
-3:17/0 = 0
-4:17/0 = 0
-5:17/0 = 0
-6:17/0 = 0
-7:17/0 = 0
-8:17/0 = 0
-9:17/0 = 0
-10:17/0 = 0
-11:17/0 = 0
-12:17/0 = 0
-13:17/0 = 0
-14:17/0 = 0
-15:17/0 = 0
-16:17/0 = 0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xm2m"]
 
-[sub_resource type="TileSet" id="TileSet_lquwl"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_1bvp3")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2yge"]
+texture = ExtResource("2_0xm2m")
+texture_margin_left = 7.50004
+texture_margin_top = 5.98407
+texture_margin_right = 8.05855
+texture_margin_bottom = 9.89366
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 45.0001, 49.1142)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
-size = Vector2(18.9515, 33.3694)
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Env" type="TileMapLayer" parent="."]
-position = Vector2(193, -37)
-scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAD0//z/AAAQAAIAADD0//3/AAAQAAIAADD0//7/AAAQAAIAADD0////AAAQAAIAADD0/wAAAAAQAAIAADD0/wEAAAAQAAIAADD0/wIAAAAQAAIAADD0/wMAAAAQAAIAADD0/wQAAAAQAAIAADD1/wQAAAAQAAMAAAD2/wQAAAAQAAIAAGD3/wQAAAAQAAIAAGD4/wQAAAAQAAIAAGD5/wQAAAARAAAAAAD5/wUAAAAQAAIAAAD5/wYAAAAQAAIAAAD6/wcAAAAQAAIAAGD7/wcAAAAQAAIAAGD8/wcAAAAQAAIAAGD9/wcAAAAQAAIAAGD+/wcAAAAQAAIAAGD//wcAAAAQAAIAAGAAAAcAAAAQAAIAAGABAAcAAAAQAAMAAAACAAcAAAAQAAMAAAACAAYAAAAQAAIAAGADAAYAAAAQAAIAAGAEAAYAAAAQAAMAAAAFAAYAAAAQAAIAAAAFAAUAAAAQAAIAAAAFAAQAAAAQAAIAAAAFAAMAAAAQAAIAAAAFAAIAAAARAAAAAAAEAAIAAAAQAAIAAGADAAIAAAAQAAIAAGACAAIAAAAQAAIAAGABAAIAAAAQAAIAAGAAAAIAAAAQAAIAAGD//wIAAAAQAAMAAAD+/wIAAAAQAAMAAAD+/wEAAAAQAAMAAAD9/wAAAAAQAAMAAAD9////AAAQAAIAAAD9//7/AAAQAAIAAAD9//3/AAAQAAIAAAD9//z/AAAQAAIAAAD9//v/AAARAAAAAAD8//v/AAAQAAMAAAD8//r/AAAQAAIAAAD7//r/AAAQAAMAAAD7//n/AAAQAAIAAGD6//n/AAAQAAIAAGD5//n/AAAQAAIAAGD5//r/AAAQAAIAAFD4//r/AAAQAAMAAAD3//r/AAAQAAMAAAD2//r/AAAQAAIAAGD1//r/AAAQAAIAAGD1//v/AAAQAAMAAAD0//v/AAAQAAIAADD9/wEAAAAQAAMAAAD8//z/AAAQAAMAAAD8//3/AAAQAAMAAAD8//7/AAAQAAIAADD8////AAAQAAIAADD8/wAAAAAQAAIAADD7//v/AAAQAAIAADD6//r/AAAQAAIAAFD4//v/AAARAAAAACD3//v/AAAQAAIAAFD2//v/AAAQAAIAAFD1//z/AAAQAAIAAAD1////AAAQAAIAAAD1/wAAAAAQAAIAAAD1/wEAAAAQAAIAAAD1/wIAAAAQAAIAAAD1//3/AAAQAAIAAAD1//7/AAAQAAIAAAD1/wMAAAAQAAIAAAD3/wUAAAAQAAIAAFD4/wUAAAAQAAMAAAD2/wUAAAAQAAIAAFD1/wUAAAAQAAIAAFD4/wYAAAAQAAIAADD4/wcAAAAQAAIAADD5/wcAAAAQAAMAAAD6/wgAAAAQAAIAAFD7/wgAAAAQAAIAAFD8/wgAAAAQAAIAAFD9/wgAAAAQAAIAAFACAAgAAAAQAAIAAFABAAgAAAAQAAIAAFAAAAgAAAAQAAIAAFD//wgAAAAQAAIAAFD+/wgAAAAQAAIAAFABAAYAAAARAAAAAGADAAcAAAAQAAMAAAAEAAcAAAAQAAIAAFAFAAcAAAARAAAAACAEAAUAAAAQAAIAABAEAAQAAAAQAAIAABAEAAMAAAAQAAMAAAADAAMAAAAQAAIAAFACAAMAAAAQAAIAAFABAAMAAAAQAAIAAFAAAAMAAAAQAAIAAFD//wMAAAAQAAIAAFD//wEAAAARAAAAAHD+/wAAAAARAAAAAHD7//z/AAAQAAIAADD4//n/AAAQAAIAAGD0//r/AAARAAAAAGD0/wUAAAARAAAAADD5/wgAAAAQAAIAAFD4/wgAAAARAAAAADADAAgAAAARAAAAACD7//3/AAARAAAAADD8/wEAAAARAAAAADD9/wIAAAARAAAAADD+/wMAAAARAAAAADD8//n/AAARAAAAAAD3//n/AAARAAAAABA=")
-tile_set = SubResource("TileSet_lquwl")
-
-[node name="Car1" type="CharacterBody2D" parent="."]
-position = Vector2(-212, -160)
-rotation = -3.11996
-script = ExtResource("1_0xm2m")
-
-[node name="Sprite2D" type="Sprite2D" parent="Car1"]
-position = Vector2(-0.978148, 1.02139)
-scale = Vector2(0.261492, 0.261492)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ig7tw"]
 texture = ExtResource("1_ig7tw")
+texture_margin_left = 7.50004
+texture_margin_top = 7.46417
+texture_margin_right = 8.05855
+texture_margin_bottom = 5.34577
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0.0646706, -2.54502, 44.9483, 47.2074)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Car1"]
-position = Vector2(-0.978155, 1.02138)
-shape = SubResource("RectangleShape2D_ig7tw")
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ycdy4")
 
-[node name="Car2" type="CharacterBody2D" parent="."]
-position = Vector2(-241, -160)
-rotation = -3.11996
-script = ExtResource("1_0xm2m")
-input_prefix = "p2"
+[node name="Panel" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141176, 0.635294, 0.333333, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Car2"]
-position = Vector2(-0.978148, 1.02139)
-scale = Vector2(0.261492, 0.261492)
-texture = ExtResource("1_ig7tw")
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -259.0
+offset_right = 200.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1bvp3")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Car2"]
-position = Vector2(-0.978155, 1.02138)
-shape = SubResource("RectangleShape2D_ig7tw")
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -159.0
+offset_right = 200.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_h2yge")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0xm2m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h2yge")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ig7tw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h2yge")
+text = "Play"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.5
+offset_top = 68.0
+offset_right = 180.5
+offset_bottom = 129.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_h2yge")
+theme_override_font_sizes/font_size = 60
+text = "Rural Racer"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -95.5
+offset_top = -245.0
+offset_right = 95.5
+offset_bottom = -224.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_h2yge")
+theme_override_font_sizes/font_size = 20
+text = "First to 3 laps wins"
+
+[node name="Player1" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_bottom = -20.0
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Player1"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 27.0
+offset_right = 117.0
+offset_bottom = 91.0
+texture = ExtResource("5_5vw27")
+
+[node name="TextureRect3" type="TextureRect" parent="Player1"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = -24.0
+offset_right = 168.0
+offset_bottom = 40.0
+texture = ExtResource("6_kek77")
+
+[node name="TextureRect4" type="TextureRect" parent="Player1"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 27.0
+offset_right = 168.0
+offset_bottom = 91.0
+texture = ExtResource("7_4c57u")
+
+[node name="TextureRect5" type="TextureRect" parent="Player1"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 27.0
+offset_right = 219.0
+offset_bottom = 91.0
+texture = ExtResource("8_efxa6")
+
+[node name="Label2" type="Label" parent="Player1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 95.0
+offset_right = 192.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_h2yge")
+theme_override_font_sizes/font_size = 20
+text = "Player one"
+
+[node name="Player2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Player2"]
+layout_mode = 0
+offset_left = -228.0
+offset_top = 27.0
+offset_right = -164.0
+offset_bottom = 91.0
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Player2"]
+layout_mode = 0
+offset_left = -177.0
+offset_top = -24.0
+offset_right = -113.0
+offset_bottom = 40.0
+texture = ExtResource("10_ycdy4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Player2"]
+layout_mode = 0
+offset_left = -177.0
+offset_top = 27.0
+offset_right = -113.0
+offset_bottom = 91.0
+texture = ExtResource("11_w48qg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Player2"]
+layout_mode = 0
+offset_left = -126.0
+offset_top = 27.0
+offset_right = -62.0
+offset_bottom = 91.0
+texture = ExtResource("12_vivmo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="Player2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = 95.0
+offset_right = -89.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_h2yge")
+theme_override_font_sizes/font_size = 20
+text = "Player Two"

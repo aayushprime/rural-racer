@@ -10,9 +10,11 @@ config_version=5
 
 [application]
 
-config/name="plinko"
-run/main_scene="uid://cjc5s7fvsb7hy"
+config/name="RuralRacer"
+run/main_scene="uid://xctf2b4ecqk1"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/image="uid://b5m82vrxx6xab"
+config/icon="uid://b5m82vrxx6xab"
 
 [display]
 

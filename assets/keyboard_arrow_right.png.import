@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6eiaq4kkfj27"
-path="res://.godot/imported/car_black_1.png-2f996c1bd4fe03694829f2a4473be2af.ctex"
+uid="uid://dycik25a26cou"
+path="res://.godot/imported/keyboard_arrow_right.png-531f159cbb56a7fd21f4db64becc61ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_racing-pack/PNG/Cars/car_black_1.png"
-dest_files=["res://.godot/imported/car_black_1.png-2f996c1bd4fe03694829f2a4473be2af.ctex"]
+source_file="res://assets/keyboard_arrow_right.png"
+dest_files=["res://.godot/imported/keyboard_arrow_right.png-531f159cbb56a7fd21f4db64becc61ce.ctex"]
 
 [params]
 
